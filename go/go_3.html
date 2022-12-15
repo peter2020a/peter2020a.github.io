@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>gorm基本使用 | 流浪地球</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="纵然出走时未曾想要流浪半生，归来时早已发现少年不再">
+    
+    <link rel="preload" href="/assets/css/0.styles.7b36eabc.css" as="style"><link rel="preload" href="/assets/js/app.2cd84a3f.js" as="script"><link rel="preload" href="/assets/js/2.63c13255.js" as="script"><link rel="preload" href="/assets/js/22.29cdb2fb.js" as="script"><link rel="prefetch" href="/assets/js/10.79ce38a9.js"><link rel="prefetch" href="/assets/js/11.b1d01830.js"><link rel="prefetch" href="/assets/js/12.8736c32f.js"><link rel="prefetch" href="/assets/js/13.ebee3709.js"><link rel="prefetch" href="/assets/js/14.2b0d4a27.js"><link rel="prefetch" href="/assets/js/15.e1d296a3.js"><link rel="prefetch" href="/assets/js/16.380d3c5e.js"><link rel="prefetch" href="/assets/js/17.746ecd1f.js"><link rel="prefetch" href="/assets/js/18.753f8f5a.js"><link rel="prefetch" href="/assets/js/19.9e16d87a.js"><link rel="prefetch" href="/assets/js/20.54b076df.js"><link rel="prefetch" href="/assets/js/21.11dd81d7.js"><link rel="prefetch" href="/assets/js/23.fd2fe5c2.js"><link rel="prefetch" href="/assets/js/24.ca7d6a70.js"><link rel="prefetch" href="/assets/js/25.0564d66c.js"><link rel="prefetch" href="/assets/js/26.ad480a02.js"><link rel="prefetch" href="/assets/js/27.4c43d411.js"><link rel="prefetch" href="/assets/js/28.e66385b0.js"><link rel="prefetch" href="/assets/js/29.ae4baeca.js"><link rel="prefetch" href="/assets/js/3.55d44e04.js"><link rel="prefetch" href="/assets/js/30.ba670f02.js"><link rel="prefetch" href="/assets/js/31.f3f42409.js"><link rel="prefetch" href="/assets/js/32.5d600afc.js"><link rel="prefetch" href="/assets/js/33.40a2a336.js"><link rel="prefetch" href="/assets/js/34.2a621ea3.js"><link rel="prefetch" href="/assets/js/35.56b8ae56.js"><link rel="prefetch" href="/assets/js/36.9e35ae04.js"><link rel="prefetch" href="/assets/js/37.78bb6a4a.js"><link rel="prefetch" href="/assets/js/38.4955006a.js"><link rel="prefetch" href="/assets/js/39.9ae6e79e.js"><link rel="prefetch" href="/assets/js/4.13c31685.js"><link rel="prefetch" href="/assets/js/40.b516ee81.js"><link rel="prefetch" href="/assets/js/41.6d6a113f.js"><link rel="prefetch" href="/assets/js/42.3b5d7847.js"><link rel="prefetch" href="/assets/js/43.41821ddc.js"><link rel="prefetch" href="/assets/js/44.bb04bcbc.js"><link rel="prefetch" href="/assets/js/45.46e8e459.js"><link rel="prefetch" href="/assets/js/46.9de03981.js"><link rel="prefetch" href="/assets/js/47.aea7ab35.js"><link rel="prefetch" href="/assets/js/48.adb143bb.js"><link rel="prefetch" href="/assets/js/49.fd27f7d0.js"><link rel="prefetch" href="/assets/js/5.69487806.js"><link rel="prefetch" href="/assets/js/6.8d81f0ec.js"><link rel="prefetch" href="/assets/js/7.3bd43f9a.js"><link rel="prefetch" href="/assets/js/8.f6a07905.js"><link rel="prefetch" href="/assets/js/9.36b4852e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7b36eabc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">流浪地球</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Java/java_1.html" class="nav-link">
+  jobHandler调度管理
+</a></li><li class="dropdown-item"><!----> <a href="/Java/java_2.html" class="nav-link">
+  jProtobuf尝鲜
+</a></li><li class="dropdown-item"><!----> <a href="/SpringBoot/springboot_1.html" class="nav-link">
+  使用Docker部署Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/SpringCloud/springcloud_1.html" class="nav-link">
+  springcloud(一)：初识Spring Cloud
+</a></li><li class="dropdown-item"><!----> <a href="/SpringCloud/springcloud_2.html" class="nav-link">
+  springcloud(二)：注册中心Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/Java/java_3.html" class="nav-link">
+  java8 toMap问题(key重复如何解决)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BigData/bigdata_1.html" class="nav-link">
+  使用Docker搭建Hadoop集群(伪分布式与完全分布式)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="区块链" class="dropdown-title"><span class="title">区块链</span> <span class="arrow down"></span></button> <button type="button" aria-label="区块链" class="mobile-dropdown-title"><span class="title">区块链</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockChain/block_1.html" class="nav-link">
+  1、Java实现简单区块链
+</a></li><li class="dropdown-item"><!----> <a href="/BlockChain/block_2.html" class="nav-link">
+  2、Java实现可交易钱包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Go" class="dropdown-title"><span class="title">Go</span> <span class="arrow down"></span></button> <button type="button" aria-label="Go" class="mobile-dropdown-title"><span class="title">Go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/go_1.html" class="nav-link">
+  go的基本命令详解
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_2.html" class="nav-link">
+  gin框架使用案例
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_3.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  gorm基本使用
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_4.html" class="nav-link">
+  Golang操作Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_5.html" class="nav-link">
+  golang实现tcp通信
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_6.html" class="nav-link">
+  Golang使用Protobuf 
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Linux/linux_1.html" class="nav-link">
+  虚拟机3种网络模式
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_2.html" class="nav-link">
+  linux常用命令总结
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_3.html" class="nav-link">
+  centos7部署FastDFS
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_4.html" class="nav-link">
+  centos7中根据文件大小排序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Docker" class="dropdown-title"><span class="title">Docker</span> <span class="arrow down"></span></button> <button type="button" aria-label="Docker" class="mobile-dropdown-title"><span class="title">Docker</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Docker/docker_1.html" class="nav-link">
+  Docker(一)：Docker入门教程
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_2.html" class="nav-link">
+  Docker(二)：Dockerfile使用介绍
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_3.html" class="nav-link">
+  Docker(三)：Dockerfile命令详解
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_4.html" class="nav-link">
+  Docker(四)：Docker三剑客之Docker Compose
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_5.html" class="nav-link">
+  Docker(五)：Docker三剑客之Docker Machine
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_6.html" class="nav-link">
+  Docker(六)：Docker三剑客之Docker Swarm
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_7.html" class="nav-link">
+  Docker安装MariaDB
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_9.html" class="nav-link">
+  Docker安装Mysql8
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_8.html" class="nav-link">
+  Docker安装Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_10.html" class="nav-link">
+  Docker安装Nacos
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="K8s" class="dropdown-title"><span class="title">K8s</span> <span class="arrow down"></span></button> <button type="button" aria-label="K8s" class="mobile-dropdown-title"><span class="title">K8s</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/K8s/k8s_1.html" class="nav-link">
+  VirtualBox + centos7部署k8s
+</a></li><li class="dropdown-item"><!----> <a href="/K8s/k8s_2.html" class="nav-link">
+  kubectl常用命令
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Nginx" class="dropdown-title"><span class="title">Nginx</span> <span class="arrow down"></span></button> <button type="button" aria-label="Nginx" class="mobile-dropdown-title"><span class="title">Nginx</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OpenResty/nginx.html" class="nav-link">
+  Nginx 配置详解
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/nginx_2.html" class="nav-link">
+  Nginx 常用命令
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/openresty_1.html" class="nav-link">
+  OpenResty 使用介绍
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/openresty_2.html" class="nav-link">
+  OpenResty(Nginx+Lua)测试用例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Jenkins" class="dropdown-title"><span class="title">Jenkins</span> <span class="arrow down"></span></button> <button type="button" aria-label="Jenkins" class="mobile-dropdown-title"><span class="title">Jenkins</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Jenkins/jenkins_1.html" class="nav-link">
+  快速安装Jenkins完美教程
+</a></li><li class="dropdown-item"><!----> <a href="/Jenkins/jenkins_2.html" class="nav-link">
+  Docker jenkins配置NPM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow down"></span></button> <button type="button" aria-label="其它" class="mobile-dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Other/2019.1.2.html" class="nav-link">
+  Vuepress搭建静态博客
+</a></li><li class="dropdown-item"><!----> <a href="/Other/markdown.html" class="nav-link">
+  Markdown基本语法
+</a></li></ul></div></div><div class="nav-item"><a href="/Readme/index.html" class="nav-link">
+  关于我
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Java/java_1.html" class="nav-link">
+  jobHandler调度管理
+</a></li><li class="dropdown-item"><!----> <a href="/Java/java_2.html" class="nav-link">
+  jProtobuf尝鲜
+</a></li><li class="dropdown-item"><!----> <a href="/SpringBoot/springboot_1.html" class="nav-link">
+  使用Docker部署Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/SpringCloud/springcloud_1.html" class="nav-link">
+  springcloud(一)：初识Spring Cloud
+</a></li><li class="dropdown-item"><!----> <a href="/SpringCloud/springcloud_2.html" class="nav-link">
+  springcloud(二)：注册中心Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/Java/java_3.html" class="nav-link">
+  java8 toMap问题(key重复如何解决)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BigData/bigdata_1.html" class="nav-link">
+  使用Docker搭建Hadoop集群(伪分布式与完全分布式)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="区块链" class="dropdown-title"><span class="title">区块链</span> <span class="arrow down"></span></button> <button type="button" aria-label="区块链" class="mobile-dropdown-title"><span class="title">区块链</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockChain/block_1.html" class="nav-link">
+  1、Java实现简单区块链
+</a></li><li class="dropdown-item"><!----> <a href="/BlockChain/block_2.html" class="nav-link">
+  2、Java实现可交易钱包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Go" class="dropdown-title"><span class="title">Go</span> <span class="arrow down"></span></button> <button type="button" aria-label="Go" class="mobile-dropdown-title"><span class="title">Go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/go_1.html" class="nav-link">
+  go的基本命令详解
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_2.html" class="nav-link">
+  gin框架使用案例
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_3.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  gorm基本使用
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_4.html" class="nav-link">
+  Golang操作Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_5.html" class="nav-link">
+  golang实现tcp通信
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_6.html" class="nav-link">
+  Golang使用Protobuf 
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Linux/linux_1.html" class="nav-link">
+  虚拟机3种网络模式
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_2.html" class="nav-link">
+  linux常用命令总结
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_3.html" class="nav-link">
+  centos7部署FastDFS
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_4.html" class="nav-link">
+  centos7中根据文件大小排序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Docker" class="dropdown-title"><span class="title">Docker</span> <span class="arrow down"></span></button> <button type="button" aria-label="Docker" class="mobile-dropdown-title"><span class="title">Docker</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Docker/docker_1.html" class="nav-link">
+  Docker(一)：Docker入门教程
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_2.html" class="nav-link">
+  Docker(二)：Dockerfile使用介绍
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_3.html" class="nav-link">
+  Docker(三)：Dockerfile命令详解
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_4.html" class="nav-link">
+  Docker(四)：Docker三剑客之Docker Compose
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_5.html" class="nav-link">
+  Docker(五)：Docker三剑客之Docker Machine
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_6.html" class="nav-link">
+  Docker(六)：Docker三剑客之Docker Swarm
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_7.html" class="nav-link">
+  Docker安装MariaDB
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_9.html" class="nav-link">
+  Docker安装Mysql8
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_8.html" class="nav-link">
+  Docker安装Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_10.html" class="nav-link">
+  Docker安装Nacos
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="K8s" class="dropdown-title"><span class="title">K8s</span> <span class="arrow down"></span></button> <button type="button" aria-label="K8s" class="mobile-dropdown-title"><span class="title">K8s</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/K8s/k8s_1.html" class="nav-link">
+  VirtualBox + centos7部署k8s
+</a></li><li class="dropdown-item"><!----> <a href="/K8s/k8s_2.html" class="nav-link">
+  kubectl常用命令
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Nginx" class="dropdown-title"><span class="title">Nginx</span> <span class="arrow down"></span></button> <button type="button" aria-label="Nginx" class="mobile-dropdown-title"><span class="title">Nginx</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OpenResty/nginx.html" class="nav-link">
+  Nginx 配置详解
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/nginx_2.html" class="nav-link">
+  Nginx 常用命令
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/openresty_1.html" class="nav-link">
+  OpenResty 使用介绍
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/openresty_2.html" class="nav-link">
+  OpenResty(Nginx+Lua)测试用例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Jenkins" class="dropdown-title"><span class="title">Jenkins</span> <span class="arrow down"></span></button> <button type="button" aria-label="Jenkins" class="mobile-dropdown-title"><span class="title">Jenkins</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Jenkins/jenkins_1.html" class="nav-link">
+  快速安装Jenkins完美教程
+</a></li><li class="dropdown-item"><!----> <a href="/Jenkins/jenkins_2.html" class="nav-link">
+  Docker jenkins配置NPM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow down"></span></button> <button type="button" aria-label="其它" class="mobile-dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Other/2019.1.2.html" class="nav-link">
+  Vuepress搭建静态博客
+</a></li><li class="dropdown-item"><!----> <a href="/Other/markdown.html" class="nav-link">
+  Markdown基本语法
+</a></li></ul></div></div><div class="nav-item"><a href="/Readme/index.html" class="nav-link">
+  关于我
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="gorm基本使用"><a href="#gorm基本使用" class="header-anchor">#</a> gorm基本使用</h1> <h2 id="gorm安装"><a href="#gorm安装" class="header-anchor">#</a> gorm安装</h2> <p>gorm框架是go的一个数据库连接及交互框架，一般用于连接关系型数据库。</p> <p>安装gorm，使用命令安装：</p> <div class="language- extra-class"><pre class="language-text"><code>go get -u -v github.com/jinzhu/gorm
+</code></pre></div><h2 id="连接数据库"><a href="#连接数据库" class="header-anchor">#</a> 连接数据库</h2> <p>构建连接的目标为数据库中某一个库，同大多数框架一样使用url进行连接，url基本格式：</p> <div class="language- extra-class"><pre class="language-text"><code>用户名:密码@连接方式(ip:port)/数据库名?参数
+</code></pre></div><h4 id="格式解释"><a href="#格式解释" class="header-anchor">#</a> 格式解释：</h4> <div class="language- extra-class"><pre class="language-text"><code>用户名：连接数据库用户名
+
+密码：连接数据库密码
+
+连接方式：或称为访问协议，一般为tcp
+
+ip：数据库所在服务器地址
+
+port：数据库监听端口
+
+数据库名：数据库中对应要连接库名
+
+参数：附加数据库参数，根据数据库不同内容不同
+</code></pre></div><p>确定url后，就可以调用gorm中参数进行连接数据库操作：</p> <div class="language- extra-class"><pre class="language-text"><code>//调用Open函数连接数据库，第一个参数为对应数据库名称，这里以mysql为例，mariadb也可以使用mysql作为名称。第二个参数为刚才设置好的url。
+
+//得到两个结果：第一个为连接后对象，用于操作数据库对象；第二个为错误信息，连接失败会返回内容，连接成功返回nil，空。
+
+dbConn, err := gorm.Open(&quot;mysql&quot;, &quot;root:123456@tcp(127.0.0.1:3306)/test1?charset=utf8&amp;parseTime=True&amp;loc=Local&quot;)
+
+if err != nil {
+
+  panic(err)
+
+}
+</code></pre></div><p>别忘记import语句导入包：</p> <div class="language- extra-class"><pre class="language-text"><code>// gorm包
+
+&quot;github.com/jinzhu/gorm&quot;
+
+//数据库方言，因为不会直接使用，所以前面要加下划线
+
+_ &quot;github.com/jinzhu/gorm/dialects/mysql&quot;
+    操作完数据库后不要忘了关闭连接：
+
+dbConn.Close()
+</code></pre></div><h2 id="表操作"><a href="#表操作" class="header-anchor">#</a> 表操作</h2> <h3 id="创建表"><a href="#创建表" class="header-anchor">#</a> 创建表</h3> <p>gorm创建表基于结构体，所以创建表前要先用结构体规划表结构，这里简单写一个结构体,创建表时默认结构体第一个字段作为主键：</p> <div class="language- extra-class"><pre class="language-text"><code>type User struct {
+
+  Id int
+
+  Name string
+
+  Data string
+
+}
+</code></pre></div><p>写好结构体后，调用创建表语句直接按照结构体结构创建表：</p> <div class="language- extra-class"><pre class="language-text"><code>// 直接创建表
+
+dbConn.CreateTable(&amp;User{})
+
+// 自定义表名创建表
+
+dbConn.Table(&quot;user&quot;).Create(&amp;User{})
+</code></pre></div><p>当直接创建表时，表名遵循规范：</p> <p>1、大写字母全部小写，所有位于中间的大写字母都变成小写字母并且前面加下划线，例如UserInfo结构体创建为表名称为user_infos。</p> <p>2、上面最后的那个s是因为直接创建表时，名称最后都会加上一个s。所以上面结构体User创建表后名称为users。</p> <h3 id="删除表"><a href="#删除表" class="header-anchor">#</a> 删除表</h3> <div class="language- extra-class"><pre class="language-text"><code>// 按照结构体删除，即默认表名
+dbConn.DropTable(&amp;User{})
+
+//按照表名删除，可为自定义的表名
+dbConn.DropTable(&quot;user&quot;)
+</code></pre></div><h2 id="增删改查"><a href="#增删改查" class="header-anchor">#</a> 增删改查</h2> <h3 id="插入数据"><a href="#插入数据" class="header-anchor">#</a> 插入数据</h3> <p>插入数据,插入数据方法结构使用Create方法：</p> <div class="language- extra-class"><pre class="language-text"><code>// 默认表名插入数据
+dbConn.Create(&amp;User{Id: 1, Name: &quot;awda&quot;, Data: &quot;ssss&quot;})
+
+// 自定义表名插入数据
+dbConn.Table(&quot;user&quot;).Create(&amp;User{Id: 1, Name: &quot;awda&quot;, Data: &quot;ssss&quot;})
+</code></pre></div><h3 id="查询数据"><a href="#查询数据" class="header-anchor">#</a> 查询数据</h3> <p>查询第一条找到的数据,使用First，该方法返回值仍然为db对象，所以接收数据时我们需要先定义一个对应表结构的结构体接收数据：</p> <div class="language- extra-class"><pre class="language-text"><code>//定义user的结构体对象
+
+var user User
+
+// 还是两种操作方式
+
+//其中&amp;user代表上面定义的结构体对象用于接收数据，使用时通过上面变量直接操作
+
+//默认查询的话相当于查询第一条数据
+
+dbConn.First(&amp;user)
+
+dbConn.Table(&quot;user&quot;).First(&amp;user)
+
+//输出内容
+
+fmt.Print(user.Id)
+
+//带条件查询
+
+//只传入一个参数时代表默认查询主键
+
+dbConn.First(&amp;user, 1)
+
+dbConn.Table(&quot;user&quot;).First(&amp;user, 1)
+
+//也可以指定查询条件，条件书写格式与普通sql语句并无不同，其中?代表占位符，First方法是动态参数方法，可以传入任意参数，将按照?占位符逐个传入。
+
+dbConn.First(&amp;user, &quot;name=? and id = ?&quot;, &quot;awda&quot;, 1)
+
+dbConn.Table(&quot;user&quot;).First(&amp;user, &quot;name=? and id = ?&quot;, &quot;awda&quot;, 1)
+</code></pre></div><p>有First就有Last，同First调用格式一致。</p> <p>批量查询,批量查询使用Find方法，其余参数结构同First或Last相同，只不过传参时一般传入数组参数，当然，First或Last方法也可以传入数组参数，但得到的数组只有一个数据，批量查询操作：</p> <div class="language- extra-class"><pre class="language-text"><code>//定义结构体数组接收批量数据
+var user[] User
+
+//其余操作与之前相同，不再过度演示
+dbConn.Find(&amp;user)
+
+dbConn.Table(&quot;user&quot;).Find(&amp;user)
+</code></pre></div><h3 id="更新数据"><a href="#更新数据" class="header-anchor">#</a> 更新数据</h3> <div class="language- extra-class"><pre class="language-text"><code>//根据Where语句更新
+//更新单个字段
+dbConn.Table(&quot;user&quot;).Where(&quot;id=?&quot;, 1).Update(&quot;id&quot;, 1234)
+
+//更新批量字段
+dbConn.Table(&quot;user&quot;).Where(&quot;id=?&quot;,2).Updates(&amp;User{Id: 123, Name: &quot;awdawd1231&quot;})
+
+//按主键更新，传入结构体对象，根据对应主键更新相应内容
+dbConn.Table(&quot;user&quot;).Save(&amp;user1)
+</code></pre></div><h3 id="删除内容"><a href="#删除内容" class="header-anchor">#</a> 删除内容</h3> <div class="language- extra-class"><pre class="language-text"><code>//按照主键删除
+dbConn.Table(&quot;user&quot;).Delete(&amp;user1)
+
+//指定条件删除,后面需要指定一个空指针，因为Delete方法必须有参数
+dbTable(&quot;user&quot;).Where(条件表达式).Delete(&amp;User{})
+
+//传入空指针代表指定结构，按照默认表名去删除其中内容
+db.Where(条件表达式).Delete(&amp;User{})
+</code></pre></div><h2 id="联表查询"><a href="#联表查询" class="header-anchor">#</a> 联表查询</h2> <h3 id="gorm实现"><a href="#gorm实现" class="header-anchor">#</a> gorm实现</h3> <div class="language- extra-class"><pre class="language-text"><code>	db.Model(&amp;Worker{}).
+		Select(&quot;workers.csbh,workers.gzryxm,workers.gzrysjh,workers.gzrysfz&quot;).
+		Joins(&quot;left join worker_records on workers.gzrysfz = worker_records.gzrsfz&quot;).
+		Where(&quot;worker_records.gzrsfz&quot;, nil).
+		Scan(&amp;notClockedInPeopleAll)
+</code></pre></div><h3 id="mysql原生实现"><a href="#mysql原生实现" class="header-anchor">#</a> MySQL原生实现</h3> <div class="language- extra-class"><pre class="language-text"><code>SELECT w.gzryxm,w.gzrysjh,w.gzrysfz
+FROM workers w
+LEFT JOIN worker_records wr
+ON w.gzrysfz = wr.gzrsfz
+WHERE wr.gzrsfz IS NULL
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2cd84a3f.js" defer></script><script src="/assets/js/2.63c13255.js" defer></script><script src="/assets/js/22.29cdb2fb.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker jenkins配置nodejs | 流浪地球</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="纵然出走时未曾想要流浪半生，归来时早已发现少年不再">
+    
+    <link rel="preload" href="/assets/css/0.styles.7b36eabc.css" as="style"><link rel="preload" href="/assets/js/app.2cd84a3f.js" as="script"><link rel="preload" href="/assets/js/2.63c13255.js" as="script"><link rel="preload" href="/assets/js/30.ba670f02.js" as="script"><link rel="prefetch" href="/assets/js/10.79ce38a9.js"><link rel="prefetch" href="/assets/js/11.b1d01830.js"><link rel="prefetch" href="/assets/js/12.8736c32f.js"><link rel="prefetch" href="/assets/js/13.ebee3709.js"><link rel="prefetch" href="/assets/js/14.2b0d4a27.js"><link rel="prefetch" href="/assets/js/15.e1d296a3.js"><link rel="prefetch" href="/assets/js/16.380d3c5e.js"><link rel="prefetch" href="/assets/js/17.746ecd1f.js"><link rel="prefetch" href="/assets/js/18.753f8f5a.js"><link rel="prefetch" href="/assets/js/19.9e16d87a.js"><link rel="prefetch" href="/assets/js/20.54b076df.js"><link rel="prefetch" href="/assets/js/21.11dd81d7.js"><link rel="prefetch" href="/assets/js/22.29cdb2fb.js"><link rel="prefetch" href="/assets/js/23.fd2fe5c2.js"><link rel="prefetch" href="/assets/js/24.ca7d6a70.js"><link rel="prefetch" href="/assets/js/25.0564d66c.js"><link rel="prefetch" href="/assets/js/26.ad480a02.js"><link rel="prefetch" href="/assets/js/27.4c43d411.js"><link rel="prefetch" href="/assets/js/28.e66385b0.js"><link rel="prefetch" href="/assets/js/29.ae4baeca.js"><link rel="prefetch" href="/assets/js/3.55d44e04.js"><link rel="prefetch" href="/assets/js/31.f3f42409.js"><link rel="prefetch" href="/assets/js/32.5d600afc.js"><link rel="prefetch" href="/assets/js/33.40a2a336.js"><link rel="prefetch" href="/assets/js/34.2a621ea3.js"><link rel="prefetch" href="/assets/js/35.56b8ae56.js"><link rel="prefetch" href="/assets/js/36.9e35ae04.js"><link rel="prefetch" href="/assets/js/37.78bb6a4a.js"><link rel="prefetch" href="/assets/js/38.4955006a.js"><link rel="prefetch" href="/assets/js/39.9ae6e79e.js"><link rel="prefetch" href="/assets/js/4.13c31685.js"><link rel="prefetch" href="/assets/js/40.b516ee81.js"><link rel="prefetch" href="/assets/js/41.6d6a113f.js"><link rel="prefetch" href="/assets/js/42.3b5d7847.js"><link rel="prefetch" href="/assets/js/43.41821ddc.js"><link rel="prefetch" href="/assets/js/44.bb04bcbc.js"><link rel="prefetch" href="/assets/js/45.46e8e459.js"><link rel="prefetch" href="/assets/js/46.9de03981.js"><link rel="prefetch" href="/assets/js/47.aea7ab35.js"><link rel="prefetch" href="/assets/js/48.adb143bb.js"><link rel="prefetch" href="/assets/js/49.fd27f7d0.js"><link rel="prefetch" href="/assets/js/5.69487806.js"><link rel="prefetch" href="/assets/js/6.8d81f0ec.js"><link rel="prefetch" href="/assets/js/7.3bd43f9a.js"><link rel="prefetch" href="/assets/js/8.f6a07905.js"><link rel="prefetch" href="/assets/js/9.36b4852e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7b36eabc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">流浪地球</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Java/java_1.html" class="nav-link">
+  jobHandler调度管理
+</a></li><li class="dropdown-item"><!----> <a href="/Java/java_2.html" class="nav-link">
+  jProtobuf尝鲜
+</a></li><li class="dropdown-item"><!----> <a href="/SpringBoot/springboot_1.html" class="nav-link">
+  使用Docker部署Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/SpringCloud/springcloud_1.html" class="nav-link">
+  springcloud(一)：初识Spring Cloud
+</a></li><li class="dropdown-item"><!----> <a href="/SpringCloud/springcloud_2.html" class="nav-link">
+  springcloud(二)：注册中心Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/Java/java_3.html" class="nav-link">
+  java8 toMap问题(key重复如何解决)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BigData/bigdata_1.html" class="nav-link">
+  使用Docker搭建Hadoop集群(伪分布式与完全分布式)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="区块链" class="dropdown-title"><span class="title">区块链</span> <span class="arrow down"></span></button> <button type="button" aria-label="区块链" class="mobile-dropdown-title"><span class="title">区块链</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockChain/block_1.html" class="nav-link">
+  1、Java实现简单区块链
+</a></li><li class="dropdown-item"><!----> <a href="/BlockChain/block_2.html" class="nav-link">
+  2、Java实现可交易钱包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Go" class="dropdown-title"><span class="title">Go</span> <span class="arrow down"></span></button> <button type="button" aria-label="Go" class="mobile-dropdown-title"><span class="title">Go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/go_1.html" class="nav-link">
+  go的基本命令详解
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_2.html" class="nav-link">
+  gin框架使用案例
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_3.html" class="nav-link">
+  gorm基本使用
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_4.html" class="nav-link">
+  Golang操作Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_5.html" class="nav-link">
+  golang实现tcp通信
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_6.html" class="nav-link">
+  Golang使用Protobuf 
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Linux/linux_1.html" class="nav-link">
+  虚拟机3种网络模式
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_2.html" class="nav-link">
+  linux常用命令总结
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_3.html" class="nav-link">
+  centos7部署FastDFS
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_4.html" class="nav-link">
+  centos7中根据文件大小排序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Docker" class="dropdown-title"><span class="title">Docker</span> <span class="arrow down"></span></button> <button type="button" aria-label="Docker" class="mobile-dropdown-title"><span class="title">Docker</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Docker/docker_1.html" class="nav-link">
+  Docker(一)：Docker入门教程
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_2.html" class="nav-link">
+  Docker(二)：Dockerfile使用介绍
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_3.html" class="nav-link">
+  Docker(三)：Dockerfile命令详解
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_4.html" class="nav-link">
+  Docker(四)：Docker三剑客之Docker Compose
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_5.html" class="nav-link">
+  Docker(五)：Docker三剑客之Docker Machine
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_6.html" class="nav-link">
+  Docker(六)：Docker三剑客之Docker Swarm
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_7.html" class="nav-link">
+  Docker安装MariaDB
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_9.html" class="nav-link">
+  Docker安装Mysql8
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_8.html" class="nav-link">
+  Docker安装Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_10.html" class="nav-link">
+  Docker安装Nacos
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="K8s" class="dropdown-title"><span class="title">K8s</span> <span class="arrow down"></span></button> <button type="button" aria-label="K8s" class="mobile-dropdown-title"><span class="title">K8s</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/K8s/k8s_1.html" class="nav-link">
+  VirtualBox + centos7部署k8s
+</a></li><li class="dropdown-item"><!----> <a href="/K8s/k8s_2.html" class="nav-link">
+  kubectl常用命令
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Nginx" class="dropdown-title"><span class="title">Nginx</span> <span class="arrow down"></span></button> <button type="button" aria-label="Nginx" class="mobile-dropdown-title"><span class="title">Nginx</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OpenResty/nginx.html" class="nav-link">
+  Nginx 配置详解
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/nginx_2.html" class="nav-link">
+  Nginx 常用命令
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/openresty_1.html" class="nav-link">
+  OpenResty 使用介绍
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/openresty_2.html" class="nav-link">
+  OpenResty(Nginx+Lua)测试用例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Jenkins" class="dropdown-title"><span class="title">Jenkins</span> <span class="arrow down"></span></button> <button type="button" aria-label="Jenkins" class="mobile-dropdown-title"><span class="title">Jenkins</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Jenkins/jenkins_1.html" class="nav-link">
+  快速安装Jenkins完美教程
+</a></li><li class="dropdown-item"><!----> <a href="/Jenkins/jenkins_2.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Docker jenkins配置NPM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow down"></span></button> <button type="button" aria-label="其它" class="mobile-dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Other/2019.1.2.html" class="nav-link">
+  Vuepress搭建静态博客
+</a></li><li class="dropdown-item"><!----> <a href="/Other/markdown.html" class="nav-link">
+  Markdown基本语法
+</a></li></ul></div></div><div class="nav-item"><a href="/Readme/index.html" class="nav-link">
+  关于我
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Java/java_1.html" class="nav-link">
+  jobHandler调度管理
+</a></li><li class="dropdown-item"><!----> <a href="/Java/java_2.html" class="nav-link">
+  jProtobuf尝鲜
+</a></li><li class="dropdown-item"><!----> <a href="/SpringBoot/springboot_1.html" class="nav-link">
+  使用Docker部署Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/SpringCloud/springcloud_1.html" class="nav-link">
+  springcloud(一)：初识Spring Cloud
+</a></li><li class="dropdown-item"><!----> <a href="/SpringCloud/springcloud_2.html" class="nav-link">
+  springcloud(二)：注册中心Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/Java/java_3.html" class="nav-link">
+  java8 toMap问题(key重复如何解决)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BigData/bigdata_1.html" class="nav-link">
+  使用Docker搭建Hadoop集群(伪分布式与完全分布式)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="区块链" class="dropdown-title"><span class="title">区块链</span> <span class="arrow down"></span></button> <button type="button" aria-label="区块链" class="mobile-dropdown-title"><span class="title">区块链</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockChain/block_1.html" class="nav-link">
+  1、Java实现简单区块链
+</a></li><li class="dropdown-item"><!----> <a href="/BlockChain/block_2.html" class="nav-link">
+  2、Java实现可交易钱包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Go" class="dropdown-title"><span class="title">Go</span> <span class="arrow down"></span></button> <button type="button" aria-label="Go" class="mobile-dropdown-title"><span class="title">Go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/go_1.html" class="nav-link">
+  go的基本命令详解
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_2.html" class="nav-link">
+  gin框架使用案例
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_3.html" class="nav-link">
+  gorm基本使用
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_4.html" class="nav-link">
+  Golang操作Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_5.html" class="nav-link">
+  golang实现tcp通信
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_6.html" class="nav-link">
+  Golang使用Protobuf 
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Linux/linux_1.html" class="nav-link">
+  虚拟机3种网络模式
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_2.html" class="nav-link">
+  linux常用命令总结
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_3.html" class="nav-link">
+  centos7部署FastDFS
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_4.html" class="nav-link">
+  centos7中根据文件大小排序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Docker" class="dropdown-title"><span class="title">Docker</span> <span class="arrow down"></span></button> <button type="button" aria-label="Docker" class="mobile-dropdown-title"><span class="title">Docker</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Docker/docker_1.html" class="nav-link">
+  Docker(一)：Docker入门教程
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_2.html" class="nav-link">
+  Docker(二)：Dockerfile使用介绍
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_3.html" class="nav-link">
+  Docker(三)：Dockerfile命令详解
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_4.html" class="nav-link">
+  Docker(四)：Docker三剑客之Docker Compose
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_5.html" class="nav-link">
+  Docker(五)：Docker三剑客之Docker Machine
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_6.html" class="nav-link">
+  Docker(六)：Docker三剑客之Docker Swarm
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_7.html" class="nav-link">
+  Docker安装MariaDB
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_9.html" class="nav-link">
+  Docker安装Mysql8
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_8.html" class="nav-link">
+  Docker安装Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_10.html" class="nav-link">
+  Docker安装Nacos
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="K8s" class="dropdown-title"><span class="title">K8s</span> <span class="arrow down"></span></button> <button type="button" aria-label="K8s" class="mobile-dropdown-title"><span class="title">K8s</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/K8s/k8s_1.html" class="nav-link">
+  VirtualBox + centos7部署k8s
+</a></li><li class="dropdown-item"><!----> <a href="/K8s/k8s_2.html" class="nav-link">
+  kubectl常用命令
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Nginx" class="dropdown-title"><span class="title">Nginx</span> <span class="arrow down"></span></button> <button type="button" aria-label="Nginx" class="mobile-dropdown-title"><span class="title">Nginx</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OpenResty/nginx.html" class="nav-link">
+  Nginx 配置详解
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/nginx_2.html" class="nav-link">
+  Nginx 常用命令
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/openresty_1.html" class="nav-link">
+  OpenResty 使用介绍
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/openresty_2.html" class="nav-link">
+  OpenResty(Nginx+Lua)测试用例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Jenkins" class="dropdown-title"><span class="title">Jenkins</span> <span class="arrow down"></span></button> <button type="button" aria-label="Jenkins" class="mobile-dropdown-title"><span class="title">Jenkins</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Jenkins/jenkins_1.html" class="nav-link">
+  快速安装Jenkins完美教程
+</a></li><li class="dropdown-item"><!----> <a href="/Jenkins/jenkins_2.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Docker jenkins配置NPM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow down"></span></button> <button type="button" aria-label="其它" class="mobile-dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Other/2019.1.2.html" class="nav-link">
+  Vuepress搭建静态博客
+</a></li><li class="dropdown-item"><!----> <a href="/Other/markdown.html" class="nav-link">
+  Markdown基本语法
+</a></li></ul></div></div><div class="nav-item"><a href="/Readme/index.html" class="nav-link">
+  关于我
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="docker-jenkins配置nodejs"><a href="#docker-jenkins配置nodejs" class="header-anchor">#</a> Docker jenkins配置nodejs</h1> <p>配置前端部署job前，需要配置相关配置。执行命令如下：</p> <h3 id="在宿主机上下载并解压nodejs包"><a href="#在宿主机上下载并解压nodejs包" class="header-anchor">#</a> 在宿主机上下载并解压nodejs包：</h3> <div class="language- extra-class"><pre class="language-text"><code>cd /var/jenkins_mount
+mkdir nodejs
+cd nodejs
+wget https://nodejs.org/dist/v14.18.1/node-v14.18.1-linux-x64.tar.xz
+tar -xvf node-v14.18.1-linux-x64.tar.xz
+</code></pre></div><h3 id="使用root账户进入jenkins容器并配置"><a href="#使用root账户进入jenkins容器并配置" class="header-anchor">#</a> 使用root账户进入jenkins容器并配置：</h3> <div class="language- extra-class"><pre class="language-text"><code>docker exec -it -u root myjenkins /bin/bash
+ln -s /var/jenkins_home/nodejs/node-v14.18.1-linux-x64/bin/npm /usr/local/bin
+ln -s /var/jenkins_home/nodejs/node-v14.18.1-linux-x64/bin/node /usr/local/bin
+</code></pre></div><p>配置完成，可以通过<code>npm -v</code>查看npm版本</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2cd84a3f.js" defer></script><script src="/assets/js/2.63c13255.js" defer></script><script src="/assets/js/30.ba670f02.js" defer></script>
+  </body>
+</html>

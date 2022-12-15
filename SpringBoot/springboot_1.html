@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用Docker部署Spring Boot | 流浪地球</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/logo.ico">
+    <meta name="description" content="纵然出走时未曾想要流浪半生，归来时早已发现少年不再">
+    
+    <link rel="preload" href="/assets/css/0.styles.7b36eabc.css" as="style"><link rel="preload" href="/assets/js/app.2cd84a3f.js" as="script"><link rel="preload" href="/assets/js/2.63c13255.js" as="script"><link rel="preload" href="/assets/js/45.46e8e459.js" as="script"><link rel="prefetch" href="/assets/js/10.79ce38a9.js"><link rel="prefetch" href="/assets/js/11.b1d01830.js"><link rel="prefetch" href="/assets/js/12.8736c32f.js"><link rel="prefetch" href="/assets/js/13.ebee3709.js"><link rel="prefetch" href="/assets/js/14.2b0d4a27.js"><link rel="prefetch" href="/assets/js/15.e1d296a3.js"><link rel="prefetch" href="/assets/js/16.380d3c5e.js"><link rel="prefetch" href="/assets/js/17.746ecd1f.js"><link rel="prefetch" href="/assets/js/18.753f8f5a.js"><link rel="prefetch" href="/assets/js/19.9e16d87a.js"><link rel="prefetch" href="/assets/js/20.54b076df.js"><link rel="prefetch" href="/assets/js/21.11dd81d7.js"><link rel="prefetch" href="/assets/js/22.29cdb2fb.js"><link rel="prefetch" href="/assets/js/23.fd2fe5c2.js"><link rel="prefetch" href="/assets/js/24.ca7d6a70.js"><link rel="prefetch" href="/assets/js/25.0564d66c.js"><link rel="prefetch" href="/assets/js/26.ad480a02.js"><link rel="prefetch" href="/assets/js/27.4c43d411.js"><link rel="prefetch" href="/assets/js/28.e66385b0.js"><link rel="prefetch" href="/assets/js/29.ae4baeca.js"><link rel="prefetch" href="/assets/js/3.55d44e04.js"><link rel="prefetch" href="/assets/js/30.ba670f02.js"><link rel="prefetch" href="/assets/js/31.f3f42409.js"><link rel="prefetch" href="/assets/js/32.5d600afc.js"><link rel="prefetch" href="/assets/js/33.40a2a336.js"><link rel="prefetch" href="/assets/js/34.2a621ea3.js"><link rel="prefetch" href="/assets/js/35.56b8ae56.js"><link rel="prefetch" href="/assets/js/36.9e35ae04.js"><link rel="prefetch" href="/assets/js/37.78bb6a4a.js"><link rel="prefetch" href="/assets/js/38.4955006a.js"><link rel="prefetch" href="/assets/js/39.9ae6e79e.js"><link rel="prefetch" href="/assets/js/4.13c31685.js"><link rel="prefetch" href="/assets/js/40.b516ee81.js"><link rel="prefetch" href="/assets/js/41.6d6a113f.js"><link rel="prefetch" href="/assets/js/42.3b5d7847.js"><link rel="prefetch" href="/assets/js/43.41821ddc.js"><link rel="prefetch" href="/assets/js/44.bb04bcbc.js"><link rel="prefetch" href="/assets/js/46.9de03981.js"><link rel="prefetch" href="/assets/js/47.aea7ab35.js"><link rel="prefetch" href="/assets/js/48.adb143bb.js"><link rel="prefetch" href="/assets/js/49.fd27f7d0.js"><link rel="prefetch" href="/assets/js/5.69487806.js"><link rel="prefetch" href="/assets/js/6.8d81f0ec.js"><link rel="prefetch" href="/assets/js/7.3bd43f9a.js"><link rel="prefetch" href="/assets/js/8.f6a07905.js"><link rel="prefetch" href="/assets/js/9.36b4852e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7b36eabc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">流浪地球</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Java/java_1.html" class="nav-link">
+  jobHandler调度管理
+</a></li><li class="dropdown-item"><!----> <a href="/Java/java_2.html" class="nav-link">
+  jProtobuf尝鲜
+</a></li><li class="dropdown-item"><!----> <a href="/SpringBoot/springboot_1.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  使用Docker部署Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/SpringCloud/springcloud_1.html" class="nav-link">
+  springcloud(一)：初识Spring Cloud
+</a></li><li class="dropdown-item"><!----> <a href="/SpringCloud/springcloud_2.html" class="nav-link">
+  springcloud(二)：注册中心Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/Java/java_3.html" class="nav-link">
+  java8 toMap问题(key重复如何解决)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BigData/bigdata_1.html" class="nav-link">
+  使用Docker搭建Hadoop集群(伪分布式与完全分布式)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="区块链" class="dropdown-title"><span class="title">区块链</span> <span class="arrow down"></span></button> <button type="button" aria-label="区块链" class="mobile-dropdown-title"><span class="title">区块链</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockChain/block_1.html" class="nav-link">
+  1、Java实现简单区块链
+</a></li><li class="dropdown-item"><!----> <a href="/BlockChain/block_2.html" class="nav-link">
+  2、Java实现可交易钱包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Go" class="dropdown-title"><span class="title">Go</span> <span class="arrow down"></span></button> <button type="button" aria-label="Go" class="mobile-dropdown-title"><span class="title">Go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/go_1.html" class="nav-link">
+  go的基本命令详解
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_2.html" class="nav-link">
+  gin框架使用案例
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_3.html" class="nav-link">
+  gorm基本使用
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_4.html" class="nav-link">
+  Golang操作Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_5.html" class="nav-link">
+  golang实现tcp通信
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_6.html" class="nav-link">
+  Golang使用Protobuf 
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Linux/linux_1.html" class="nav-link">
+  虚拟机3种网络模式
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_2.html" class="nav-link">
+  linux常用命令总结
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_3.html" class="nav-link">
+  centos7部署FastDFS
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_4.html" class="nav-link">
+  centos7中根据文件大小排序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Docker" class="dropdown-title"><span class="title">Docker</span> <span class="arrow down"></span></button> <button type="button" aria-label="Docker" class="mobile-dropdown-title"><span class="title">Docker</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Docker/docker_1.html" class="nav-link">
+  Docker(一)：Docker入门教程
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_2.html" class="nav-link">
+  Docker(二)：Dockerfile使用介绍
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_3.html" class="nav-link">
+  Docker(三)：Dockerfile命令详解
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_4.html" class="nav-link">
+  Docker(四)：Docker三剑客之Docker Compose
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_5.html" class="nav-link">
+  Docker(五)：Docker三剑客之Docker Machine
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_6.html" class="nav-link">
+  Docker(六)：Docker三剑客之Docker Swarm
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_7.html" class="nav-link">
+  Docker安装MariaDB
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_9.html" class="nav-link">
+  Docker安装Mysql8
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_8.html" class="nav-link">
+  Docker安装Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_10.html" class="nav-link">
+  Docker安装Nacos
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="K8s" class="dropdown-title"><span class="title">K8s</span> <span class="arrow down"></span></button> <button type="button" aria-label="K8s" class="mobile-dropdown-title"><span class="title">K8s</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/K8s/k8s_1.html" class="nav-link">
+  VirtualBox + centos7部署k8s
+</a></li><li class="dropdown-item"><!----> <a href="/K8s/k8s_2.html" class="nav-link">
+  kubectl常用命令
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Nginx" class="dropdown-title"><span class="title">Nginx</span> <span class="arrow down"></span></button> <button type="button" aria-label="Nginx" class="mobile-dropdown-title"><span class="title">Nginx</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OpenResty/nginx.html" class="nav-link">
+  Nginx 配置详解
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/nginx_2.html" class="nav-link">
+  Nginx 常用命令
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/openresty_1.html" class="nav-link">
+  OpenResty 使用介绍
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/openresty_2.html" class="nav-link">
+  OpenResty(Nginx+Lua)测试用例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Jenkins" class="dropdown-title"><span class="title">Jenkins</span> <span class="arrow down"></span></button> <button type="button" aria-label="Jenkins" class="mobile-dropdown-title"><span class="title">Jenkins</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Jenkins/jenkins_1.html" class="nav-link">
+  快速安装Jenkins完美教程
+</a></li><li class="dropdown-item"><!----> <a href="/Jenkins/jenkins_2.html" class="nav-link">
+  Docker jenkins配置NPM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow down"></span></button> <button type="button" aria-label="其它" class="mobile-dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Other/2019.1.2.html" class="nav-link">
+  Vuepress搭建静态博客
+</a></li><li class="dropdown-item"><!----> <a href="/Other/markdown.html" class="nav-link">
+  Markdown基本语法
+</a></li></ul></div></div><div class="nav-item"><a href="/Readme/index.html" class="nav-link">
+  关于我
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Java/java_1.html" class="nav-link">
+  jobHandler调度管理
+</a></li><li class="dropdown-item"><!----> <a href="/Java/java_2.html" class="nav-link">
+  jProtobuf尝鲜
+</a></li><li class="dropdown-item"><!----> <a href="/SpringBoot/springboot_1.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  使用Docker部署Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/SpringCloud/springcloud_1.html" class="nav-link">
+  springcloud(一)：初识Spring Cloud
+</a></li><li class="dropdown-item"><!----> <a href="/SpringCloud/springcloud_2.html" class="nav-link">
+  springcloud(二)：注册中心Eureka
+</a></li><li class="dropdown-item"><!----> <a href="/Java/java_3.html" class="nav-link">
+  java8 toMap问题(key重复如何解决)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大数据" class="dropdown-title"><span class="title">大数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="大数据" class="mobile-dropdown-title"><span class="title">大数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BigData/bigdata_1.html" class="nav-link">
+  使用Docker搭建Hadoop集群(伪分布式与完全分布式)
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="区块链" class="dropdown-title"><span class="title">区块链</span> <span class="arrow down"></span></button> <button type="button" aria-label="区块链" class="mobile-dropdown-title"><span class="title">区块链</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/BlockChain/block_1.html" class="nav-link">
+  1、Java实现简单区块链
+</a></li><li class="dropdown-item"><!----> <a href="/BlockChain/block_2.html" class="nav-link">
+  2、Java实现可交易钱包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Go" class="dropdown-title"><span class="title">Go</span> <span class="arrow down"></span></button> <button type="button" aria-label="Go" class="mobile-dropdown-title"><span class="title">Go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/go_1.html" class="nav-link">
+  go的基本命令详解
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_2.html" class="nav-link">
+  gin框架使用案例
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_3.html" class="nav-link">
+  gorm基本使用
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_4.html" class="nav-link">
+  Golang操作Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_5.html" class="nav-link">
+  golang实现tcp通信
+</a></li><li class="dropdown-item"><!----> <a href="/Go/go_6.html" class="nav-link">
+  Golang使用Protobuf 
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux" class="mobile-dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Linux/linux_1.html" class="nav-link">
+  虚拟机3种网络模式
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_2.html" class="nav-link">
+  linux常用命令总结
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_3.html" class="nav-link">
+  centos7部署FastDFS
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/linux_4.html" class="nav-link">
+  centos7中根据文件大小排序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Docker" class="dropdown-title"><span class="title">Docker</span> <span class="arrow down"></span></button> <button type="button" aria-label="Docker" class="mobile-dropdown-title"><span class="title">Docker</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Docker/docker_1.html" class="nav-link">
+  Docker(一)：Docker入门教程
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_2.html" class="nav-link">
+  Docker(二)：Dockerfile使用介绍
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_3.html" class="nav-link">
+  Docker(三)：Dockerfile命令详解
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_4.html" class="nav-link">
+  Docker(四)：Docker三剑客之Docker Compose
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_5.html" class="nav-link">
+  Docker(五)：Docker三剑客之Docker Machine
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_6.html" class="nav-link">
+  Docker(六)：Docker三剑客之Docker Swarm
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_7.html" class="nav-link">
+  Docker安装MariaDB
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_9.html" class="nav-link">
+  Docker安装Mysql8
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_8.html" class="nav-link">
+  Docker安装Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Docker/docker_10.html" class="nav-link">
+  Docker安装Nacos
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="K8s" class="dropdown-title"><span class="title">K8s</span> <span class="arrow down"></span></button> <button type="button" aria-label="K8s" class="mobile-dropdown-title"><span class="title">K8s</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/K8s/k8s_1.html" class="nav-link">
+  VirtualBox + centos7部署k8s
+</a></li><li class="dropdown-item"><!----> <a href="/K8s/k8s_2.html" class="nav-link">
+  kubectl常用命令
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Nginx" class="dropdown-title"><span class="title">Nginx</span> <span class="arrow down"></span></button> <button type="button" aria-label="Nginx" class="mobile-dropdown-title"><span class="title">Nginx</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OpenResty/nginx.html" class="nav-link">
+  Nginx 配置详解
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/nginx_2.html" class="nav-link">
+  Nginx 常用命令
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/openresty_1.html" class="nav-link">
+  OpenResty 使用介绍
+</a></li><li class="dropdown-item"><!----> <a href="/OpenResty/openresty_2.html" class="nav-link">
+  OpenResty(Nginx+Lua)测试用例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Jenkins" class="dropdown-title"><span class="title">Jenkins</span> <span class="arrow down"></span></button> <button type="button" aria-label="Jenkins" class="mobile-dropdown-title"><span class="title">Jenkins</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Jenkins/jenkins_1.html" class="nav-link">
+  快速安装Jenkins完美教程
+</a></li><li class="dropdown-item"><!----> <a href="/Jenkins/jenkins_2.html" class="nav-link">
+  Docker jenkins配置NPM
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow down"></span></button> <button type="button" aria-label="其它" class="mobile-dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Other/2019.1.2.html" class="nav-link">
+  Vuepress搭建静态博客
+</a></li><li class="dropdown-item"><!----> <a href="/Other/markdown.html" class="nav-link">
+  Markdown基本语法
+</a></li></ul></div></div><div class="nav-item"><a href="/Readme/index.html" class="nav-link">
+  关于我
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="使用docker部署spring-boot"><a href="#使用docker部署spring-boot" class="header-anchor">#</a> 使用Docker部署Spring Boot</h1> <p>Docker 技术发展为微服务落地提供了更加便利的环境，使用 Docker 部署 Spring Boot 其实非常简单。</p> <p>首先构建一个简单的 Spring Boot 项目，然后给项目添加 Docker 支持，最后对项目进行部署。</p> <h2 id="一个简单-spring-boot-项目"><a href="#一个简单-spring-boot-项目" class="header-anchor">#</a> 一个简单 Spring Boot 项目</h2> <p>在 <code>pom.xml</code> 中 ，使用 Spring Boot 2.0 相关依赖</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;parent&gt;
+	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+	&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+	&lt;version&gt;2.0.0.RELEASE&lt;/version&gt;
+&lt;/parent&gt;
+</code></pre></div><p>添加 web 和测试依赖</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;dependencies&gt;
+     &lt;dependency&gt;
+	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+	&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+		&lt;scope&gt;test&lt;/scope&gt;
+	&lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre></div><p>创建一个 DockerController，在其中有一个index()方法，访问时返回：Hello Docker!</p> <div class="language- extra-class"><pre class="language-text"><code>@RestController
+public class DockerController {
+	
+    @RequestMapping(&quot;/&quot;)
+    public String index() {
+        return &quot;Hello Docker!&quot;;
+    }
+}
+</code></pre></div><p>启动类</p> <div class="language- extra-class"><pre class="language-text"><code>@SpringBootApplication
+public class DockerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DockerApplication.class, args);
+	}
+}
+</code></pre></div><p>添加完毕后启动项目，启动成功后浏览器放问：<code>http://localhost:8080/</code>，页面返回：Hello Docker!，说明 Spring Boot 项目配置正常。</p> <h2 id="spring-boot-项目添加-docker-支持"><a href="#spring-boot-项目添加-docker-支持" class="header-anchor">#</a> Spring Boot 项目添加 Docker 支持</h2> <p>在 <code>pom.xml-properties</code>中添加 Docker 镜像名称</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;properties&gt;
+	&lt;docker.image.prefix&gt;springboot&lt;/docker.image.prefix&gt;
+&lt;/properties&gt;
+</code></pre></div><p>plugins 中添加 Docker 构建插件：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;build&gt;
+	&lt;plugins&gt;
+		&lt;plugin&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+		&lt;/plugin&gt;
+		&lt;!-- Docker maven plugin --&gt;
+		&lt;plugin&gt;
+			&lt;groupId&gt;com.spotify&lt;/groupId&gt;
+			&lt;artifactId&gt;docker-maven-plugin&lt;/artifactId&gt;
+			&lt;version&gt;1.0.0&lt;/version&gt;
+			&lt;configuration&gt;
+				&lt;imageName&gt;${docker.image.prefix}/${project.artifactId}&lt;/imageName&gt;
+				&lt;dockerDirectory&gt;src/main/docker&lt;/dockerDirectory&gt;
+				&lt;resources&gt;
+					&lt;resource&gt;
+						&lt;targetPath&gt;/&lt;/targetPath&gt;
+						&lt;directory&gt;${project.build.directory}&lt;/directory&gt;
+						&lt;include&gt;${project.build.finalName}.jar&lt;/include&gt;
+					&lt;/resource&gt;
+				&lt;/resources&gt;
+			&lt;/configuration&gt;
+		&lt;/plugin&gt;
+		&lt;!-- Docker maven plugin --&gt;
+	&lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre></div><p>在目录src/main/docker下创建 Dockerfile 文件，Dockerfile 文件用来说明如何来构建镜像。</p> <div class="language- extra-class"><pre class="language-text"><code>FROM openjdk:8-jdk-alpine
+VOLUME /tmp
+ADD spring-boot-docker-1.0.jar app.jar
+ENTRYPOINT [&quot;java&quot;,&quot;-Djava.security.egd=file:/dev/./urandom&quot;,&quot;-jar&quot;,&quot;/app.jar&quot;]
+</code></pre></div><p>这个 Dockerfile 文件很简单，构建 Jdk 基础环境，添加 Spring Boot Jar 到镜像中，简单解释一下:</p> <ul><li>FROM ，表示使用 Jdk8 环境 为基础镜像，如果镜像不是本地的会从 DockerHub 进行下载</li> <li>VOLUME ，VOLUME 指向了一个/tmp的目录，由于 Spring Boot 使用内置的Tomcat容器，Tomcat 默认使用/tmp作为工作目录。这个命令的效果是：在宿主机的/var/lib/docker目录下创建一个临时文件并把它链接到容器中的/tmp目录</li> <li>ADD ，拷贝文件并且重命名</li> <li>ENTRYPOINT ，为了缩短 Tomcat 的启动时间，添加java.security.egd的系统属性指向/dev/urandom作为 ENTRYPOINT</li></ul> <blockquote><p>这样 Spring Boot 项目添加 Docker 依赖就完成了。</p></blockquote> <h2 id="构建打包环境"><a href="#构建打包环境" class="header-anchor">#</a> 构建打包环境</h2> <p>我们需要有一个 Docker 环境来打包 Spring Boot 项目，在 Windows 搭建 Docker 环境很麻烦，因此我这里以 Centos 7 为例。</p> <p>安装 Docker 环境
+安装</p> <div class="language- extra-class"><pre class="language-text"><code>yum install docker
+</code></pre></div><p>安装完成后，使用下面的命令来启动 docker 服务，并将其设置为开机启动：</p> <div class="language- extra-class"><pre class="language-text"><code>service docker start
+chkconfig docker on
+
+#LCTT 译注：此处采用了旧式的 sysv 语法，如采用CentOS 7中支持的新式 systemd 语法，如下：
+systemctl  start docker.service
+systemctl  enable docker.service
+</code></pre></div><p>使用Docker 中国加速器</p> <div class="language- extra-class"><pre class="language-text"><code>vi  /etc/docker/daemon.json
+
+#添加后：
+{
+    &quot;registry-mirrors&quot;: [&quot;https://registry.docker-cn.com&quot;],
+    &quot;live-restore&quot;: true
+}
+</code></pre></div><p>重新启动docker</p> <div class="language- extra-class"><pre class="language-text"><code>systemctl restart docker
+</code></pre></div><p>输入<code>docker version</code> 返回版本信息则安装正常。</p> <p>安装JDK</p> <div class="language- extra-class"><pre class="language-text"><code>yum -y install java-1.8.0-openjdk*
+</code></pre></div><p>配置环境变量
+打开 <code>vim /etc/profile</code>
+添加一下内容</p> <div class="language- extra-class"><pre class="language-text"><code>export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.161-0.b14.el7_4.x86_64 
+export PATH=$PATH:$JAVA_HOME/bin 
+</code></pre></div><p>修改完成之后，使其生效</p> <div class="language- extra-class"><pre class="language-text"><code>source /etc/profile
+</code></pre></div><p>输入java -version` 返回版本信息则安装正常。</p> <p>安装MAVEN
+下载：<code>wget http://mirrors.shu.edu.cn/apache/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz</code></p> <div class="language- extra-class"><pre class="language-text"><code>## 解压
+tar vxf apache-maven-3.5.2-bin.tar.gz
+## 移动
+mv apache-maven-3.5.2 /usr/local/maven3
+</code></pre></div><p>修改环境变量， 在<code>/etc/profile</code>中添加以下几行</p> <div class="language- extra-class"><pre class="language-text"><code>MAVEN_HOME=/usr/local/maven3
+export MAVEN_HOME
+export PATH=${PATH}:${MAVEN_HOME}/bin
+</code></pre></div><p>记得执行<code>source /etc/profile</code>使环境变量生效。</p> <p>输入<code>mvn -version</code> 返回版本信息则安装正常。</p> <blockquote><p>这样整个构建环境就配置完成了。</p></blockquote> <h2 id="使用-docker-部署-spring-boot-项目"><a href="#使用-docker-部署-spring-boot-项目" class="header-anchor">#</a> 使用 Docker 部署 Spring Boot 项目</h2> <p>将项目 <code>spring-boot-docker</code> 拷贝服务器中，进入项目路径下进行打包测试。</p> <div class="language- extra-class"><pre class="language-text"><code>#打包
+mvn package
+#启动
+java -jar target/spring-boot-docker-1.0.jar
+</code></pre></div><p>看到 Spring Boot 的启动日志后表明环境配置没有问题，接下来我们使用 DockerFile 构建镜像。</p> <div class="language- extra-class"><pre class="language-text"><code>mvn package docker:build
+</code></pre></div><p>第一次构建可能有点慢，当看到以下内容的时候表明构建成功：</p> <div class="language- extra-class"><pre class="language-text"><code>...
+Step 1 : FROM openjdk:8-jdk-alpine
+ ---&gt; 224765a6bdbe
+Step 2 : VOLUME /tmp
+ ---&gt; Using cache
+ ---&gt; b4e86cc8654e
+Step 3 : ADD spring-boot-docker-1.0.jar app.jar
+ ---&gt; a20fe75963ab
+Removing intermediate container 593ee5e1ea51
+Step 4 : ENTRYPOINT java -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+ ---&gt; Running in 85d558a10cd4
+ ---&gt; 7102f08b5e95
+Removing intermediate container 85d558a10cd4
+Successfully built 7102f08b5e95
+[INFO] Built springboot/spring-boot-docker
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 54.346 s
+[INFO] Finished at: 2018-03-13T16:20:15+08:00
+[INFO] Final Memory: 42M/182M
+[INFO] ------------------------------------------------------------------------
+</code></pre></div><p>使用<code>docker images</code>命令查看构建好的镜像：</p> <div class="language- extra-class"><pre class="language-text"><code>docker images
+REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE
+springboot/spring-boot-docker   latest              99ce9468da74        6 seconds ago       117.5 MB
+</code></pre></div><p><code>springboot/spring-boot-docker</code> 就是我们构建好的镜像，下一步就是运行该镜像</p> <div class="language- extra-class"><pre class="language-text"><code>docker run -p 8080:8080 -t springboot/spring-boot-docker
+</code></pre></div><p>启动完成之后我们使用docker ps查看正在运行的镜像：</p> <div class="language- extra-class"><pre class="language-text"><code>docker ps
+CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS              PORTS                    NAMES
+049570da86a9        springboot/spring-boot-docker   &quot;java -Djava.security&quot;   30 seconds ago      Up 27 seconds       0.0.0.0:8080-&gt;8080/tcp   determined_mahavira
+</code></pre></div><p>可以看到我们构建的容器正在在运行，访问浏览器：<code>http://192.168.0.x:8080/</code>,返回</p> <div class="language- extra-class"><pre class="language-text"><code>Hello Docker!
+</code></pre></div><p>说明使用 Docker 部署 Spring Boot 项目成功！</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2cd84a3f.js" defer></script><script src="/assets/js/2.63c13255.js" defer></script><script src="/assets/js/45.46e8e459.js" defer></script>
+  </body>
+</html>
